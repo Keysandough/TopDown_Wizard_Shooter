@@ -6,22 +6,32 @@ public class CoinScript : MonoBehaviour
 {
     private ManagerScript managerScript;
     private Rigidbody2D rigidBody;
-    private Vector2 dropDir;
     private float force = 60f;
+
+    private GameObject player;
+
 
     private void Start()
     {
+        player = GameObject.Find("CoinCollector");
         //for counting stuff
         managerScript = FindObjectOfType<ManagerScript>();
 
         rigidBody = GetComponent<Rigidbody2D>();
-        dropDir.x = Random.Range(-1, 1);
-        dropDir.y = Random.Range(-1, 1);
-        rigidBody.AddForce(dropDir * force);
 
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        rigidBody.AddForce(dir * force);
+    }
 
+    private void Update()
+    {
+        //Coin Moving Toward Player if close enough.
+        if (Vector3.Distance(transform.position, player.transform.position) < 0.7f)
+        {
+            Vector2 targetTransform = Vector2.MoveTowards(transform.position, player.transform.position, 10 * Time.deltaTime);
+            rigidBody.MovePosition(targetTransform);
 
-
+        }
     }
 
 

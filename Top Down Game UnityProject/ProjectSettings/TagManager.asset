@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Projectile
   - Destructable
+  - Coins
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - Player
   - PlayerProjectile
-  - 
+  - Coin
   - 
   - 
   - 
@@ -41,11 +42,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Envoirment
+    uniqueID: 3884263763
+    locked: 0
   - name: Remains
     uniqueID: 4098285805
-    locked: 0
-  - name: Default
-    uniqueID: 0
     locked: 0
   - name: Items
     uniqueID: 3549949845
@@ -55,6 +56,12 @@ TagManager:
     locked: 0
   - name: FX
     uniqueID: 2367986955
+    locked: 0
+  - name: Env_overlay
+    uniqueID: 3100413445
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Crosshairs
     uniqueID: 1155065247

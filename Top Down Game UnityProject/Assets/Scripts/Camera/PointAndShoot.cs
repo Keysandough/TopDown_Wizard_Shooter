@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class PointAndShoot : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class PointAndShoot : MonoBehaviour
 
 
 
-    public float maxMana = 1500f;
+    public float maxMana = 15f;
     //maxMAna Should be 15f
-    public float mana = 1500f;
+    public float mana;
     private float manaRegen = 0.4f;
 
     private float manaCost = 1.0f;
@@ -26,10 +27,8 @@ public class PointAndShoot : MonoBehaviour
 
 
     public Image notEnoughMana;
-    
 
     
-
 
 
     // Start is called before the first frame update
@@ -90,7 +89,7 @@ public class PointAndShoot : MonoBehaviour
         else
         {
             //NOT ENOUGH MANA
-            Debug.Log("!!! Not Enough Mana !!!");
+            
         }
         
     }

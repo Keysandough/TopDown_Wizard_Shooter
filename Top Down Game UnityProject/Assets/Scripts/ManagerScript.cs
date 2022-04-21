@@ -12,9 +12,11 @@ public class ManagerScript : MonoBehaviour
     public TextMeshProUGUI coinText;
 
     public GameObject player;
+    public float playerDamageMod = 1;
 
     public GameObject keyIcon;
     private bool gotKey = false;
+  
 
 
     private AudioSource coinAudio;
@@ -41,5 +43,8 @@ public class ManagerScript : MonoBehaviour
             gotKey = true;
         }
     }
+
+
+    
 
 }

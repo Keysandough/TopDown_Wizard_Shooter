@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public int health = 20;
+    public float health = 20;
+
+    public bool keyBearer = false;
+    
 
     [SerializeField]private float speed;
     private Transform target;
@@ -13,8 +16,11 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject manaPotion;
     public GameObject coinPrefab;
+    public GameObject key;
 
     private int coinNumber;
+
+    private ManagerScript managerScript;
 
     
 
@@ -24,6 +30,7 @@ public class EnemyScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyrb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        managerScript = FindObjectOfType<ManagerScript>();
     }
 
 
@@ -49,36 +56,45 @@ public class EnemyScript : MonoBehaviour
     {
         if (health <= 0)
         {
-            Instantiate(corpse, this.transform.position, Quaternion.identity);
-
-            
-            //CHANGE FROM MANA POTION TO COIN I THINK: DONE
-            //COIN DROP
-            coinNumber = Random.Range(0, 6);
-            for (int i = 0; i < coinNumber; i++)
-            {
-                Instantiate(coinPrefab, this.transform.position, Quaternion.identity);
-            }
-            
 
             Destroy(this.gameObject);
         }
     }
+   
+    
+    private void OnDestroy()
+    {
+        Instantiate(corpse, this.transform.position, Quaternion.identity);
 
-    
-    
+        if (keyBearer == true)
+        { Instantiate(key, transform.position, Quaternion.identity); }
+
+        //POTION DROP
+        if (Random.Range(0, 9) > 6)
+        {
+            Instantiate(manaPotion, transform.position, Quaternion.identity);
+        }
+        //COIN DROP
+        coinNumber = Random.Range(0, 6);
+        for (int i = 0; i < coinNumber; i++)
+        {
+            Instantiate(coinPrefab, this.transform.position, Quaternion.identity);
+        }
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Projectile")
         {
-            GettingHit();
+            float rawDamage = Random.Range(2, 6);
+            float damage = rawDamage * managerScript.playerDamageMod;
+            health -= damage;
+            Debug.Log("DAMAGE " + damage);
         }
 
     }
 
-    private void GettingHit()
-    {
-        Debug.Log("health: " + health);
-        health -= Random.Range(1, 6);
-    }
+    
 }

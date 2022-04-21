@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage();
-            Debug.Log("Ouch! Remaning HP:" + health);
+            //Debug.Log("Ouch! Remaning HP:" + health);
         }
     
     }

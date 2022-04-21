@@ -103,10 +103,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 12
+  keyBearer: 0
   speed: 0.5
   corpse: {fileID: 5957867518874084006, guid: 842f94a40b671004792291df0740478a, type: 3}
   manaPotion: {fileID: 1483889310288601919, guid: 3fb3319847f6d90418cb721af4cf66b6, type: 3}
   coinPrefab: {fileID: 8567024636694678963, guid: c07877a0e9d5b034e8ef8a78e88588dd, type: 3}
+  key: {fileID: 293790847169813320, guid: 198f1479568178046a7207c08c2d2f8c, type: 3}
 --- !u!70 &2250366782447121107
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
