@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1235094899083873931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300168, guid: 9603be6d9ac69924f945566fb9497bde, type: 3}
+  m_Sprite: {fileID: 1380203805528671675, guid: 3901304dfe460e54087e4398b354902e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenBarrel: {fileID: 3715415365482888646, guid: f642ee93c69d32444b1cb5e756645fc5, type: 3}
   coinPrefab: {fileID: 8567024636694678963, guid: c07877a0e9d5b034e8ef8a78e88588dd, type: 3}
+  ManaPotion: {fileID: 1483889310288601919, guid: 3fb3319847f6d90418cb721af4cf66b6, type: 3}
 --- !u!61 &3876896277140542665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,16 +112,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008043289, y: -0.28480595}
+  m_Offset: {x: 0.001379177, y: -0.0002361685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4919567, y: 0.47587013}
-    oldSize: {x: 1, y: 1.8125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.29}
     newSize: {x: 1, y: 1.8125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1554171}
+  m_Size: {x: 0.1630806, y: 0.2920992}
   m_EdgeRadius: 0

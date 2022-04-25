@@ -27,6 +27,7 @@ public class PointAndShoot : MonoBehaviour
 
 
     public Image notEnoughMana;
+    public bool attacked = false;
 
     
 
@@ -55,6 +56,8 @@ public class PointAndShoot : MonoBehaviour
         }
 
 
+        //Debug.Log(attacked);
+
 
         camTarget = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         Crosshairs.transform.position = new Vector2(camTarget.x, camTarget.y);
@@ -62,14 +65,17 @@ public class PointAndShoot : MonoBehaviour
         Vector3 difference = camTarget - firePoint.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && playerScript.isDead == false)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             fireProjectile01(direction, rotationZ);
+            attacked = true;
 
         }
+        else
+        { attacked = false; }
     }
 
 
@@ -126,7 +132,7 @@ public class PointAndShoot : MonoBehaviour
     //for character facing in X (left and right)
     private void FaceMouseLoc()
     {
-        if (Crosshairs.transform.position.x > Player.transform.position.x)
+        if (Crosshairs.transform.position.x > Player.transform.position.x && playerScript.isDead == false)
         {
            // Debug.Log("right");
             Player.GetComponent<Transform>().localScale = new Vector3(1, Player.transform.localScale.y, Player.transform.localScale.z);

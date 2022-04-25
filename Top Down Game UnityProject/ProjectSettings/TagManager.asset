@@ -21,7 +21,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Barrel
   - 
   - 
   - 
@@ -53,6 +53,9 @@ TagManager:
     locked: 0
   - name: Actors
     uniqueID: 4053492295
+    locked: 0
+  - name: Player
+    uniqueID: 1413205567
     locked: 0
   - name: FX
     uniqueID: 2367986955

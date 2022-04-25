@@ -37,6 +37,7 @@ public class EnemyScript : MonoBehaviour
     private void Update()
     {
         Death();
+        //MovetoPlayer
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
         //Rotation
@@ -91,7 +92,7 @@ public class EnemyScript : MonoBehaviour
             float rawDamage = Random.Range(2, 6);
             float damage = rawDamage * managerScript.playerDamageMod;
             health -= damage;
-            Debug.Log("DAMAGE " + damage);
+            //Debug.Log("DAMAGE " + damage);
         }
 
     }

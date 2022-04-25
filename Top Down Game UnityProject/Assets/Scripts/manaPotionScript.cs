@@ -7,19 +7,16 @@ public class manaPotionScript : MonoBehaviour
     private PointAndShoot magicSys;
 
     private Rigidbody2D rigidBody;
-    private Vector2 dropDir;
-    private float force = 50f;
+    private float force = 70f;
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
 
         magicSys = FindObjectOfType<PointAndShoot>();
-        dropDir.x = Random.Range(-1, 1);
-        dropDir.y = Random.Range(-1, 1);
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        rigidBody.AddForce(dir * force);
 
-        rigidBody.AddForce(dropDir * force);
-        
     }
 
 
@@ -29,7 +26,7 @@ public class manaPotionScript : MonoBehaviour
         {
             Destroy(this.gameObject);
             magicSys.mana = magicSys.maxMana;
-            Debug.Log("MANA POTION");
+            //Debug.Log("MANA POTION");
         }
     }
 
