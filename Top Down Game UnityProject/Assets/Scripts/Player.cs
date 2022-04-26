@@ -37,9 +37,14 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         Death();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("DODGE?");
+            dodge();
+        }
 
         //animations
-        
+
 
         if (shootingScript.attacked == true)
         {
@@ -56,19 +61,14 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
- //TODO: do something for the dodge uwa
         rb.MovePosition(rb.position + movement.normalized * speed *Time.fixedDeltaTime);
-        if (Input.GetMouseButtonDown(1))
-        {
-            dodge();
-            Debug.Log("DODGE?");
-        }
+        
     }
 
 
     private void dodge()
     {
-        rb.AddForce(movement.normalized * dodgeForce, ForceMode2D.Impulse);
+        rb.AddForce(300 * movement * 10, ForceMode2D.Force);
         
     }
     private void OnCollisionEnter2D(Collision2D collision)

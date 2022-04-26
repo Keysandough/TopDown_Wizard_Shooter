@@ -5,12 +5,13 @@ using System.Collections.Generic;
 public class playerHitboxScript : MonoBehaviour
 {
     private Player player;
+    private SpriteRenderer playerSprite;
     [SerializeField] private float cooldown;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
-
+        playerSprite = player.GetComponent<SpriteRenderer>();
 
     }
 
@@ -21,14 +22,17 @@ public class playerHitboxScript : MonoBehaviour
         {
             player.health -= 2 + Random.Range(0, 4);
 
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
             StartCoroutine(EnableBox(cooldown));
+            playerSprite.color = Color.red;
+            
         }
     }
     IEnumerator EnableBox(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        playerSprite.color = Color.white;
     }
 
 }

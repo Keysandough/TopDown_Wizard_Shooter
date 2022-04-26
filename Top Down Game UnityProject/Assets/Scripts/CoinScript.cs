@@ -6,7 +6,7 @@ public class CoinScript : MonoBehaviour
 {
     private ManagerScript managerScript;
     private Rigidbody2D rigidBody;
-    [SerializeField] private float force = 15f;
+    [SerializeField] private float force = 1f;
 
     private GameObject player;
 

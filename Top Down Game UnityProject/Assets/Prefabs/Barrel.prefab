@@ -99,6 +99,7 @@ MonoBehaviour:
   brokenBarrel: {fileID: 3715415365482888646, guid: f642ee93c69d32444b1cb5e756645fc5, type: 3}
   coinPrefab: {fileID: 8567024636694678963, guid: c07877a0e9d5b034e8ef8a78e88588dd, type: 3}
   ManaPotion: {fileID: 1483889310288601919, guid: 3fb3319847f6d90418cb721af4cf66b6, type: 3}
+  healthPotion: {fileID: 1483889310288601919, guid: a9c714f6d31d22a4a891babbc2662262, type: 3}
 --- !u!61 &3876896277140542665
 BoxCollider2D:
   m_ObjectHideFlags: 0
