@@ -8,6 +8,9 @@ TagManager:
   - Projectile
   - Destructable
   - Coins
+  - Env
+  - Music
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - PlayerProjectile
   - Coin
   - 
-  - 
-  - 
+  - PlayerHitbox
+  - EnvCol
   - Barrel
   - 
   - 

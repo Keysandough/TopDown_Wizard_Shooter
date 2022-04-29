@@ -71,7 +71,7 @@ public class EnemyScript : MonoBehaviour
         { Instantiate(key, transform.position, Quaternion.identity); }
 
         //POTION DROP
-        if (Random.Range(0, 9) > 6)
+        if (Random.Range(0, 10) > 6)
         {
             Instantiate(manaPotion, transform.position, Quaternion.identity);
         }

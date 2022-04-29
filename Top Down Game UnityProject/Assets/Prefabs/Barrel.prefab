@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1235094899083873933}
   - component: {fileID: 1235094899083873932}
   - component: {fileID: -2508867452042700405}
-  - component: {fileID: 3876896277140542665}
-  m_Layer: 0
+  - component: {fileID: 1608320684267465227}
+  m_Layer: 12
   m_Name: Barrel
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -745017451
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1380203805528671675, guid: 3901304dfe460e54087e4398b354902e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,8 +100,8 @@ MonoBehaviour:
   coinPrefab: {fileID: 8567024636694678963, guid: c07877a0e9d5b034e8ef8a78e88588dd, type: 3}
   ManaPotion: {fileID: 1483889310288601919, guid: 3fb3319847f6d90418cb721af4cf66b6, type: 3}
   healthPotion: {fileID: 1483889310288601919, guid: a9c714f6d31d22a4a891babbc2662262, type: 3}
---- !u!61 &3876896277140542665
-BoxCollider2D:
+--- !u!70 &1608320684267465227
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,16 +113,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.001379177, y: -0.0002361685}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.29}
-    newSize: {x: 1, y: 1.8125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1630806, y: 0.2920992}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.16, y: 0.29}
+  m_Direction: 0

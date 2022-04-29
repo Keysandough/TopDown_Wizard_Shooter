@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -241475001
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1068976298475803540, guid: e7d7b1abfafe1bd478b49a9210f82486, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 12
   keyBearer: 0
-  speed: 0.5
+  speed: 0.6
   corpse: {fileID: 5957867518874084006, guid: 842f94a40b671004792291df0740478a, type: 3}
   manaPotion: {fileID: 1483889310288601919, guid: 3fb3319847f6d90418cb721af4cf66b6, type: 3}
   coinPrefab: {fileID: 8567024636694678963, guid: c07877a0e9d5b034e8ef8a78e88588dd, type: 3}

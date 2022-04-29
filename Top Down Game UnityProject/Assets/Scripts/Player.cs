@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRender;
 
     private PointAndShoot shootingScript;
-
+    private PlayerDodgeCooldown dodgeCDScript;
+    public GameObject hitBox;
 
 
     public float speed = 1.5f;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
     Vector2 movement;
     public bool isDead;
+    public bool dodged = false;
     [SerializeField]
     private float dodgeForce = 50f;
 
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
         shootingScript = FindObjectOfType<PointAndShoot>();
+        dodgeCDScript = FindObjectOfType<PlayerDodgeCooldown>();
         health = maxHealth;
     }
 
@@ -37,7 +40,7 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         Death();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && dodged == false)
         {
             Debug.Log("DODGE?");
             dodge();
@@ -68,8 +71,12 @@ public class Player : MonoBehaviour
 
     private void dodge()
     {
-        rb.AddForce(300 * movement * 10, ForceMode2D.Force);
-        
+        dodged = true;
+        hitBox.GetComponent<CapsuleCollider2D>().enabled = false;
+        spriteRender.color = Color.gray;
+        rb.AddForce(150 * movement * 10, ForceMode2D.Force);
+
+        StartCoroutine(dodgeCDScript.EnableBox(dodgeCDScript.dodgeCooldown));
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

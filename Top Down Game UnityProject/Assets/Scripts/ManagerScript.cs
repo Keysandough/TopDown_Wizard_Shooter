@@ -15,7 +15,7 @@ public class ManagerScript : MonoBehaviour
     public float playerDamageMod = 1;
 
     public GameObject keyIcon;
-    private bool gotKey = false;
+    public bool gotKey = false;
   
 
 

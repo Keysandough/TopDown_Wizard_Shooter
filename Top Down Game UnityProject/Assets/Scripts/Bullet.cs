@@ -18,6 +18,11 @@ public class Bullet : MonoBehaviour
             Instantiate(fx, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
         }
+        else if (collision.CompareTag("Boss"))
+        {
+            Instantiate(fx, this.transform.position, this.transform.rotation);
+            Destroy(this.gameObject);
+        }
         else if (collision.CompareTag("Destructable"))
         {
             Instantiate(simpleFX, this.transform.position, this.transform.rotation);
