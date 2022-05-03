@@ -9,9 +9,11 @@ ScriptsOnlyBuild:
     - KeyScript
     - LockedDoor
     - ManagerScript
+    - OverheadTracker
     - Player
     - PlayerDodgeCooldown
     - PointAndShoot
+    - RestartButton
     - StatBar
     - barrelScript
     - healthPotionScript
@@ -109,7 +111,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/MainScene.unity:
+    Assets/Scenes/Scene0.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -145,67 +147,73 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 776}
-    - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 778}
     - Class: 114
       Script: {instanceID: 1614}
     - Class: 114
+      Script: {instanceID: 1616}
+    - Class: 114
       Script: {instanceID: 1662}
     - Class: 114
-      Script: {instanceID: 2152}
+      Script: {instanceID: 1770}
     - Class: 114
-      Script: {instanceID: 2660}
+      Script: {instanceID: 2154}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3610}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 3744}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 4062}
+      Script: {instanceID: 3464}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 3614}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 3748}
     - Class: 114
-      Script: {instanceID: 5426}
+      Script: {instanceID: 4066}
     - Class: 114
-      Script: {instanceID: 5930}
+      Script: {instanceID: 4116}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 4734}
     - Class: 114
-      Script: {instanceID: 6018}
+      Script: {instanceID: 5390}
     - Class: 114
-      Script: {instanceID: 6180}
+      Script: {instanceID: 5436}
     - Class: 114
-      Script: {instanceID: 6502}
+      Script: {instanceID: 5940}
     - Class: 114
-      Script: {instanceID: 6988}
+      Script: {instanceID: 5988}
     - Class: 114
-      Script: {instanceID: 7068}
+      Script: {instanceID: 6028}
     - Class: 114
-      Script: {instanceID: 7818}
+      Script: {instanceID: 6190}
     - Class: 114
-      Script: {instanceID: 7950}
+      Script: {instanceID: 6512}
     - Class: 114
-      Script: {instanceID: 8144}
+      Script: {instanceID: 6998}
     - Class: 114
-      Script: {instanceID: 8300}
+      Script: {instanceID: 7078}
     - Class: 114
-      Script: {instanceID: 35008}
+      Script: {instanceID: 7422}
     - Class: 114
-      Script: {instanceID: 47628}
+      Script: {instanceID: 7664}
     - Class: 114
-      Script: {instanceID: 48534}
+      Script: {instanceID: 7832}
+    - Class: 114
+      Script: {instanceID: 7964}
+    - Class: 114
+      Script: {instanceID: 8158}
+    - Class: 114
+      Script: {instanceID: 8314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,101 +266,101 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1608}
-    - Class: 114
       Script: {instanceID: 1610}
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
       Script: {instanceID: 1614}
     - Class: 114
+      Script: {instanceID: 1616}
+    - Class: 114
       Script: {instanceID: 1624}
     - Class: 114
       Script: {instanceID: 1768}
     - Class: 114
-      Script: {instanceID: 2234}
+      Script: {instanceID: 2236}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2498}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 3218}
+      Script: {instanceID: 3222}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3384}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 3584}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 3708}
+      Script: {instanceID: 3712}
     - Class: 114
-      Script: {instanceID: 4022}
+      Script: {instanceID: 4026}
     - Class: 114
-      Script: {instanceID: 4138}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4284}
+      Script: {instanceID: 4288}
     - Class: 114
-      Script: {instanceID: 4472}
+      Script: {instanceID: 4386}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4478}
     - Class: 114
-      Script: {instanceID: 5310}
+      Script: {instanceID: 4584}
     - Class: 114
-      Script: {instanceID: 5326}
+      Script: {instanceID: 5318}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 5332}
     - Class: 114
-      Script: {instanceID: 5386}
+      Script: {instanceID: 5336}
     - Class: 114
-      Script: {instanceID: 5584}
+      Script: {instanceID: 5390}
     - Class: 114
-      Script: {instanceID: 5586}
+      Script: {instanceID: 5396}
     - Class: 114
-      Script: {instanceID: 5610}
+      Script: {instanceID: 5594}
     - Class: 114
-      Script: {instanceID: 5886}
+      Script: {instanceID: 5596}
     - Class: 114
-      Script: {instanceID: 6018}
+      Script: {instanceID: 5620}
     - Class: 114
-      Script: {instanceID: 6170}
+      Script: {instanceID: 5896}
+    - Class: 114
+      Script: {instanceID: 6028}
     - Class: 114
       Script: {instanceID: 6180}
     - Class: 114
-      Script: {instanceID: 6248}
+      Script: {instanceID: 6190}
     - Class: 114
-      Script: {instanceID: 6254}
+      Script: {instanceID: 6258}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6264}
     - Class: 114
-      Script: {instanceID: 6388}
+      Script: {instanceID: 6364}
     - Class: 114
-      Script: {instanceID: 6434}
+      Script: {instanceID: 6398}
     - Class: 114
-      Script: {instanceID: 6502}
+      Script: {instanceID: 6444}
     - Class: 114
       Script: {instanceID: 6512}
     - Class: 114
-      Script: {instanceID: 6622}
+      Script: {instanceID: 6522}
     - Class: 114
-      Script: {instanceID: 6760}
+      Script: {instanceID: 6632}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6770}
     - Class: 114
-      Script: {instanceID: 6934}
+      Script: {instanceID: 6888}
     - Class: 114
-      Script: {instanceID: 7568}
+      Script: {instanceID: 6944}
     - Class: 114
-      Script: {instanceID: 7900}
+      Script: {instanceID: 7580}
     - Class: 114
-      Script: {instanceID: 8146}
+      Script: {instanceID: 7914}
     - Class: 114
-      Script: {instanceID: 41886}
-    - Class: 114
-      Script: {instanceID: 42374}
+      Script: {instanceID: 8160}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -436,6 +444,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RestartButton
   - hash:
       serializedVersion: 2
       Hash: 7aac0b898f5aa960e7a740fd0da5b82e
@@ -688,6 +702,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Experimental.Rendering.Universal
     className: ShadowCaster2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LockedDoor
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
@@ -948,6 +968,12 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mainMenu
+  - hash:
+      serializedVersion: 2
       Hash: af56f77a30c1a2da1680c736a6f5c6e8
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1000,6 +1026,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePOV
+  - hash:
+      serializedVersion: 2
+      Hash: f66c19c844e7f4ea1e41ecd52f14027d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossTrigger
   - hash:
       serializedVersion: 2
       Hash: 08705cef837f5d18a4c86b19b1ccf347
@@ -1114,6 +1146,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: music
   - hash:
       serializedVersion: 2
       Hash: 7dbf450932234158be58ca2027563dcb
@@ -1410,7 +1448,7 @@ ScriptsOnlyBuild:
     className: CinemachineFixedSignal
   - hash:
       serializedVersion: 2
-      Hash: 70155c1b313596c09b99020f79a16bdf
+      Hash: 5e2530a5dd085a76b3694b011de054cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ManagerScript
@@ -1500,6 +1538,12 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OverheadTracker
+  - hash:
+      serializedVersion: 2
       Hash: 48982140c520cbca517d0f96b60a0ba9
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
@@ -1534,6 +1578,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: 3102e5cd5f4d3793f86df37b55993ced
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerDodgeCooldown
   - hash:
       serializedVersion: 2
       Hash: 23d669c8bf2983ca4a3df160658318a6
@@ -1656,36 +1706,12 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 3102e5cd5f4d3793f86df37b55993ced
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerDodgeCooldown
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: mainMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: music
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LockedDoor
-  - hash:
-      serializedVersion: 2
-      Hash: f66c19c844e7f4ea1e41ecd52f14027d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossTrigger
+    className: QuitScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
-  - Assets/Scenes/MainScene.unity
+  - Assets/Scenes/Scene0.unity
   playerPath: C:/Users/StockLand/Desktop/WizardShit0-0-1/WizardShit.exe

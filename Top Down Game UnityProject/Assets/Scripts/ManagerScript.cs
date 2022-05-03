@@ -10,8 +10,10 @@ public class ManagerScript : MonoBehaviour
     private int lastCoinCount;
 
     public TextMeshProUGUI coinText;
+    public GameObject deathPrompt;
 
     public GameObject player;
+    private Player playerScript;
     public float playerDamageMod = 1;
 
     public GameObject keyIcon;
@@ -24,6 +26,7 @@ public class ManagerScript : MonoBehaviour
     private void Start()
     {
         coinAudio = GetComponent<AudioSource>();
+        playerScript = FindObjectOfType<Player>();
     }
 
     private void Update()
@@ -42,6 +45,14 @@ public class ManagerScript : MonoBehaviour
         {
             gotKey = true;
         }
+
+        onDeath();
+    }
+
+    void onDeath()
+    {
+        if (playerScript.isDead)
+        deathPrompt.SetActive(true);
     }
 
 

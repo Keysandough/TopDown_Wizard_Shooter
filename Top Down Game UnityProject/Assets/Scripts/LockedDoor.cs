@@ -14,7 +14,15 @@ public class LockedDoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && manager.gotKey == true)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            StartCoroutine(destroyDoor(1.0f));
+            
+        }
+        
+        IEnumerator destroyDoor(float waitTime)
+        {
+            GetComponent<AudioSource>().Play();
+            yield return new WaitForSeconds(waitTime);
+            Destroy(this.gameObject);
         }
     }
 }
